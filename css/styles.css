@@ -1,0 +1,176 @@
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
+
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* variables */
+
+:root {
+  /* primary colors */
+
+  --VeryDarkMagenta: hsl(300, 43%, 22%);
+  --SoftPink: hsl(333, 80%, 67%);
+
+  /* neutral colors */
+  --DarkGrayishMagenta: hsl(303, 10%, 53%);
+  --LightGrayishMagenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+html {
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.review-section {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 2rem;
+  margin: 3rem;
+  color: var(--VeryDarkMagenta);
+}
+
+.review-section__item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: calc(50% - 1rem);
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.review-section__item:last-child {
+  align-items: center;
+}
+
+.review-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+}
+
+.rating {
+  background-color: var(--LightGrayishMagenta);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+.rating:hover {
+  transition: transform 2s ease;
+  transform: scale(120%);
+}
+
+/* rating container transformations  */
+
+.rating:first-child {
+  transform: translateX(-20px);
+}
+
+.rating:nth-child(2) {
+  transform: translateX(10px);
+}
+
+.rating:last-child {
+  transform: translateX(60px);
+}
+
+.customer-feedback {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+.customer-feedback__card {
+  width: calc(33% - 1rem);
+  background-color: var(--VeryDarkMagenta);
+  color: var(--White);
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+}
+
+.customer-feedback__name {
+  font-weight: bolder;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.customer-feedback__status {
+  color: var(--SoftPink);
+  margin-bottom: 1rem;
+}
+
+.customer-feedback__img {
+  display: inline;
+  border-radius: 50%;
+  border: 2px solid var(--SoftPink);
+}
+
+/* customer feedback card transfomations */
+
+.customer-feedback__card:first-child {
+  transform: translatey(-4rem);
+}
+
+.customer-feedback__card:nth-child(2) {
+  transform: translatey(-3rem);
+}
+
+.customer-feedback__card:last-child {
+  transform: translatey(-2rem);
+}
+
+/* media queries for  mobile */
+
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .review-section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .review-section__item {
+    width: 100%;
+  }
+
+  .review-section h1 {
+    font-size: 2rem;
+  }
+
+  .review-section__item .rating {
+    transform: none;
+  }
+
+  .customer-feedback {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .customer-feedback__card {
+    width: auto;
+    margin: 2rem;
+    padding: 2rem;
+  }
+}
