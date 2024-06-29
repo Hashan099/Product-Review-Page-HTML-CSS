@@ -1,1 +1,1 @@
-![Screenshot of the application]([https://github.com/your-username/your-repository/raw/main/screenshot.png](https://github.com/Hashan099/Product-Review-Page-HTML-CSS/blob/master/Preview/desktop%20view.png))
+![Desktop Preview](https://github.com/Hashan099/Product-Review-Page-HTML-CSS/blob/master/Preview/desktop%20view.png)
